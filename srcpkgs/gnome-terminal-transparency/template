@@ -1,5 +1,5 @@
 # Template file for 'gnome-terminal-transparency'
-pkgname=gnome-terminal-transparency
+pkgname=gnome-terminal
 version=3.48.0
 revision=1
 build_style=meson
