@@ -1,6 +1,6 @@
 # Template file for 'removed-packages'
 pkgname=removed-packages
-version=0.1.20230406
+version=0.1.20230423
 revision=1
 build_style=meta
 short_desc="Uninstalls packages removed from repository"
@@ -33,6 +33,7 @@ replaces="
  appmenu-gtk-module<=0.7.6_1
  arm-mem-git<=20131108_2
  arptables<=0.0.4_3
+ aterm<=1.0.1_4
  atom<=1.44.0_1
  avogadro-devel<=1.2.0_8
  avogadro<=1.2.0_9
@@ -335,6 +336,8 @@ replaces="
  mozjs91-devel<=91.7.1_3
  mozjs91<=91.7.1_3
  mp3gain<=1.6.2_2
+ mpir<=3.0.0_1
+ mpir-devel<=3.0.0_1
  mutagen<=1.43.0_3
  nautilus-sendto<=3.8.6_2
  ncdns<=0.0.2_12
