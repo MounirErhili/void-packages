@@ -31,6 +31,7 @@ _EOF
 			ppc64*) _CMAKE_SYSTEM_PROCESSOR=ppc64 ;;
 			ppcle*) _CMAKE_SYSTEM_PROCESSOR=ppcle ;;
 			ppc*) _CMAKE_SYSTEM_PROCESSOR=ppc ;;
+			riscv64*) _CMAKE_SYSTEM_PROCESSOR=riscv64 ;;
 			*) _CMAKE_SYSTEM_PROCESSOR=generic ;;
 		esac
 		cat > cross_${XBPS_CROSS_TRIPLET}.cmake <<_EOF
@@ -55,7 +56,6 @@ _EOF
 	cmake_args+=" -DCMAKE_BUILD_TYPE=None"
 	cmake_args+=" -DCMAKE_INSTALL_LIBDIR=lib${XBPS_TARGET_WORDSIZE}"
 	cmake_args+=" -DCMAKE_INSTALL_SYSCONFDIR=/etc"
-	cmake_args+=" -DFETCHCONTENT_FULLY_DISCONNECTED=ON"
 
 	if [ "$CROSS_BUILD" ]; then
 		cmake_args+=" -DQT_HOST_PATH=/usr"
@@ -72,7 +72,6 @@ _EOF
 	cmake_args+=" -DCMAKE_INSTALL_SBINDIR=bin"
 
 	export CMAKE_GENERATOR="${CMAKE_GENERATOR:-Ninja}"
-	PATH="$PATH:/usr/libexec/xbps-src/bin"
 	# Remove -pipe: https://gitlab.kitware.com/cmake/cmake/issues/19590
 	CFLAGS="-DNDEBUG ${CFLAGS/ -pipe / }" CXXFLAGS="-DNDEBUG ${CXXFLAGS/ -pipe / }" \
 		cmake ${cmake_args} ${configure_args} \
