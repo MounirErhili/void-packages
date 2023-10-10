@@ -2238,7 +2238,7 @@ libqt5keychain.so.1 qtkeychain-qt5-0.7.0_1
 libphonon4qt5.so.4 phonon-qt5-4.8.3_1
 libphonon4qt5experimental.so.4 phonon-qt5-4.8.3_1
 libtelepathy-qt5.so.0 telepathy-qt5-0.9.5_1
-libtelepathy-qt5-service.so.0 telepathy-qt5-0.9.7_1
+libtelepathy-qt5-service.so.1 telepathy-qt5-0.9.8_1
 libtelepathy-qt5-farstream.so.0 telepathy-qt5-farstream-0.9.5_1
 libKF5Attica.so.5 attica-5.6.0_1
 liblastfm_fingerprint5.so.1 liblastfm-qt5-1.0.9_1
@@ -3487,7 +3487,7 @@ liburiparser.so.1 uriparser-0.8.6_1
 libcpptest.so.1 cpptest-2.0.0_1
 libhandy-0.0.so.0 libhandy-0.0.3_1
 libhandy-1.so.0 libhandy1-0.90.0_1
-libadwaita-1.so.0 libadwaita-1.0.0alpha2_1
+libadwaita-1.so.0 libadwaita-1.4.0_1
 libswitchboard-2.0.so.0 switchboard-2.3.2_1
 libcodecore.so.0 libio.elementary.code-3.0_1
 libpantheon-files-core.so.6 libio.elementary.files-6.0.0_1
@@ -3634,7 +3634,7 @@ libflite_cmu_us_kal.so.1 flite-2.1_1
 libflite_usenglish.so.1 flite-2.1_1
 libflite_cmulex.so.1 flite-2.1_1
 libflite_cmu_us_kal16.so.1 flite-2.2_1
-libgtk-4.so.1 gtk4-4.0.0_1
+libgtk-4.so.1 gtk4-4.12.0_1
 libmodule.so.5 libmodule-5.0.0_1
 libgnustep-gui.so.0 gnustep-gui-0.30.0_1
 libmhash.so.2 mhash-0.9.9.9_1
