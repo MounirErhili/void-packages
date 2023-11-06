@@ -1,7 +1,7 @@
 # Template file for 'synapse'
 pkgname=synapse
-version=1.93.0
-revision=2
+version=1.95.1
+revision=1
 build_style=python3-pep517
 build_helper=rust
 make_check_target=tests
@@ -25,7 +25,7 @@ license="Apache-2.0"
 homepage="https://github.com/matrix-org/synapse"
 changelog="https://raw.githubusercontent.com/matrix-org/synapse/develop/CHANGES.md"
 distfiles="https://github.com/matrix-org/synapse/archive/v${version}.tar.gz"
-checksum=4bacff7559cd1f36a51743b79fe871eb3b96933aa663aad6f8900a1c6b7f8e21
+checksum=72eb37eda94e4dad276f81d5a20c31782ba120fada0d6ac4d3efe0e8dfe642be
 
 system_accounts="synapse"
 synapse_homedir="/var/lib/synapse"

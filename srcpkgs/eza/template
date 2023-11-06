@@ -1,6 +1,6 @@
 # Template file for 'eza'
 pkgname=eza
-version=0.15.0
+version=0.15.2
 revision=1
 build_style=cargo
 hostmakedepends="pandoc pkg-config"
@@ -11,7 +11,7 @@ license="MIT"
 homepage="https://eza.rocks"
 changelog="https://raw.githubusercontent.com/eza-community/eza/main/CHANGELOG.md"
 distfiles="https://github.com/eza-community/eza/archive/refs/tags/v${version}.tar.gz"
-checksum=e4cce5a6f60e6b7405af911e3f168cf17a1e86c33c292a449c1c25c15052967a
+checksum=b8b00af94d9b8f254b5a14af3da84542893617f810dcdad782e5667a1e7af1f9
 
 post_patch() {
 	cargo update --package git2@0.18.1 --precise 0.17.2
