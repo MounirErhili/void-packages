@@ -1,12 +1,13 @@
 # Template file for 'pipewire'
 pkgname=pipewire
-version=0.3.83
+version=1.0.0
 revision=1
 build_style=meson
 configure_args="
  --auto-features=enabled
  -Db_ndebug=false
  -Ddocs=enabled
+ -Dman=enabled
  -Dlibcamera=disabled
  -Droc=disabled
  $(vopt_feature sdl2 sdl2)
@@ -37,7 +38,7 @@ license="MIT"
 homepage="https://pipewire.org/"
 changelog="https://gitlab.freedesktop.org/pipewire/pipewire/-/raw/master/NEWS"
 distfiles="https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/${version}/pipewire-${version}.tar.gz"
-checksum=b681bbf590cd02deec41802444ba5b05fe4df3e497eaa80260d1c5f7bb830bda
+checksum=f91ef1d1161b37aae6e21b9671917d97097e2664c83d919ba3a0793d6fbc543d
 make_dirs="/var/lib/pipewire 0755 _pipewire _pipewire"
 system_accounts="_pipewire"
 

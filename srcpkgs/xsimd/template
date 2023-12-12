@@ -1,7 +1,8 @@
 # Template file for 'xsimd'
 pkgname=xsimd
+reverts="11.2.0_1"
 version=11.1.0
-revision=1
+revision=2
 build_style=cmake
 short_desc="C++ wrappers for SIMD intrinsics and parallelized, optimized mathematical functions"
 maintainer="John <me@johnnynator.dev>"

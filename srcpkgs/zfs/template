@@ -1,6 +1,6 @@
 # Template file for 'zfs'
 pkgname=zfs
-version=2.2.0
+version=2.2.2
 revision=1
 build_style=gnu-configure
 configure_args="--with-config=user --with-mounthelperdir=/usr/bin
@@ -16,7 +16,7 @@ maintainer="Toyam Cox <Vaelatern@voidlinux.org>"
 license="CDDL-1.0"
 homepage="https://openzfs.github.io/openzfs-docs/"
 distfiles="https://github.com/openzfs/zfs/releases/download/zfs-${version}/zfs-${version}.tar.gz"
-checksum=42035fd059faa25a09cd511b24a57b8ad1285cb69127f2a0043b98562c5ec690
+checksum=76bc0547d9ba31d4b0142e417aaaf9f969072c3cb3c1a5b10c8738f39ed12fc9
 # dkms must be before initramfs-regenerate to build modules before images
 triggers="dkms initramfs-regenerate"
 dkms_modules="zfs ${version}"
