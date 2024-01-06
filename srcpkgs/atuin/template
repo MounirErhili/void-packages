@@ -1,0 +1,26 @@
+# Template file for 'atuin'
+pkgname=atuin
+version=17.2.1
+revision=1
+build_style=cargo
+build_helper=qemu
+make_check_args="-- --skip registration --skip sync"
+make_install_args="--path atuin"
+hostmakedepends="pkg-config sqlite-devel"
+makedepends="sqlite-devel"
+short_desc="Magical shell history"
+maintainer="Marcin Puc <tranzystorek.io@protonmail.com>"
+license="MIT"
+homepage="https://atuin.sh"
+changelog="https://raw.githubusercontent.com/atuinsh/atuin/main/CHANGELOG.md"
+distfiles="https://github.com/atuinsh/atuin/archive/refs/tags/v${version}.tar.gz"
+checksum=5bad59af24317adfa1d56fce39e231c85836fb91ac3d468830f9bb0884b320ca
+
+post_install() {
+	vlicense LICENSE
+
+	for shell in bash fish zsh; do
+		vtargetrun "${DESTDIR}/usr/bin/atuin" gen-completion --shell ${shell} > atuin.${shell}
+		vcompletion atuin.${shell} ${shell}
+	done
+}
