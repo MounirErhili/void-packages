@@ -1,12 +1,12 @@
 # Template file for 'bcachefs-tools'
 pkgname=bcachefs-tools
 reverts="24_1"
-version=1.4.1
+version=1.6.2
 revision=1
 build_style=gnu-makefile
 make_install_args="ROOT_SBINDIR=/usr/bin"
 make_use_env=yes
-hostmakedepends="pkg-config cargo clang liburcu-devel"
+hostmakedepends="pkg-config cargo clang17-devel llvm liburcu-devel"
 makedepends="rust attr-devel keyutils-devel libaio-devel libblkid-devel
  liblz4-devel libscrypt-devel libsodium-devel eudev-libudev-devel liburcu-devel
  libuuid-devel libzstd-devel zlib-devel"
@@ -15,7 +15,16 @@ maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="GPL-2.0-only"
 homepage="https://bcachefs.org/"
 distfiles="https://github.com/koverstreet/bcachefs-tools/archive/refs/tags/v${version}.tar.gz"
-checksum=682777c2391a718c34a5b8992954eba38b5916bdc5fc33f036d55562f4c45d72
+checksum=7a0b0af20f7fc89327e8b3b385c38b38b971f13094949572826bd0d1fc030df4
+
+case "$XBPS_TARGET_MACHINE" in
+	i686*) broken="complain to upstream";;
+esac
 
 export VERSION=v${version}
 export RUST_TARGET
+
+pre_build() {
+	# fuck me sideways why this is necessary, it should be default
+	RUSTFLAGS+=" -C linker=$CC"
+}
