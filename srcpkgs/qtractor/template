@@ -1,9 +1,9 @@
 # Template file for 'qtractor'
 pkgname=qtractor
-version=0.9.35
+version=1.1.1
 revision=1
-_clap_tag=1.1.8
-_vst3sdk_tag=3.7.8_build_34
+_clap_tag=1.2.1
+_vst3sdk_tag=3.7.12_build_20
 create_wrksrc=yes
 build_wrksrc="qtractor"
 build_style=cmake
@@ -18,18 +18,18 @@ maintainer="Matthias von Faber <mvf@gmx.eu>"
 license="GPL-3.0-only, BSD-3-Clause"
 homepage="https://qtractor.org"
 changelog="https://raw.githubusercontent.com/rncbc/qtractor/master/ChangeLog"
-distfiles="https://github.com/rncbc/qtractor/archive/qtractor_${version//./_}.tar.gz
- https://github.com/free-audio/clap/archive/refs/tags/$_clap_tag.tar.gz
- https://github.com/steinbergmedia/vst3sdk/archive/v$_vst3sdk_tag.tar.gz>vst3sdk-v${_vst3sdk_tag}.tar.gz
- https://github.com/steinbergmedia/vst3_base/archive/v$_vst3sdk_tag.tar.gz>vst3_base-v${_vst3sdk_tag}.tar.gz
- https://github.com/steinbergmedia/vst3_pluginterfaces/archive/v$_vst3sdk_tag.tar.gz>vst3_pluginterfaces-v${_vst3sdk_tag}.tar.gz
- https://github.com/steinbergmedia/vst3_public_sdk/archive/v$_vst3sdk_tag.tar.gz>vst3_public_sdk-v${_vst3sdk_tag}.tar.gz"
-checksum="71ab5225eda54c02707be735e7cf3f0537a1ddc361b244ef90f222381a85028f
- 6f281ef55c4cf6129cf5b1746f373a4ba3e4078c1f406202d2e34ddeae86e37a
- a27e6acc86f2761e554e2f2f8256b248345b145de02771e2f6c6fe6b24c187d8
- bd4e24f143d739d5e9e69398ed07c9961eb561cefad69486eb3453fb31bca58b
- 7509e85caf02d6567384adb84ee7b05bdea5283f52cb232e504ac44091aeb42d
- 0392a24cc3665365d3a1f448e8f1c79d5375645acf88be73598cae673afcc1fc"
+distfiles="https://github.com/rncbc/qtractor/archive/refs/tags/v${version}.tar.gz
+ https://github.com/free-audio/clap/archive/refs/tags/${_clap_tag}.tar.gz
+ https://github.com/steinbergmedia/vst3sdk/archive/refs/tags/v${_vst3sdk_tag}.tar.gz>vst3sdk-v${_vst3sdk_tag}.tar.gz
+ https://github.com/steinbergmedia/vst3_base/archive/refs/tags/v${_vst3sdk_tag}.tar.gz>vst3_base-v${_vst3sdk_tag}.tar.gz
+ https://github.com/steinbergmedia/vst3_pluginterfaces/archive/refs/tags/v${_vst3sdk_tag}.tar.gz>vst3_pluginterfaces-v${_vst3sdk_tag}.tar.gz
+ https://github.com/steinbergmedia/vst3_public_sdk/archive/refs/tags/v${_vst3sdk_tag}.tar.gz>vst3_public_sdk-v${_vst3sdk_tag}.tar.gz"
+checksum="8a6a16447e56eec95438dbc0231fff22d3f2c12afe8917b70ee41e6da1525748
+ 04fc5a94d0966e9ab9d9e78590250e692da49a716e2c9cc719ba75b45bff9c25
+ 1cafc2665f6e77c29303f7d11fd95af328f915bdd683a4e13058b8fca720d15f
+ 1d863daf5a2aae7406b4a2cebdb5c42778d483358f81fa6fc9a5fecef3aa7ea3
+ 0843f95c02a8f70658b6b1a2c96508a65b7be5093b0427e1d2074d1395fec381
+ 542aa4574065f1baf99da0d57ecbbf58c6ddf595134553400f128ed95cba54db"
 
 post_extract() {
 	cd $wrksrc

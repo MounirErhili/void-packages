@@ -3,19 +3,19 @@
 # THIS PKG MUST BE SYNCHRONIZED WITH "srcpkgs/thunderbird-i18n".
 #
 pkgname=thunderbird
-version=115.7.0
+version=115.12.2
 revision=1
 build_helper="rust"
 short_desc="Standalone Mail/News reader"
-maintainer="Érico Nogueira <ericonr@disroot.org>"
+maintainer="dataCobra <datacobra@thinkbot.de>"
 license="MPL-2.0, GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://www.thunderbird.net/"
 distfiles="${MOZILLA_SITE}/thunderbird/releases/${version}/source/thunderbird-${version}.source.tar.xz"
-checksum=19f483d4c26e47daaeabb8fb99605b12f4e842aec2814dfb92d78b1a73459f43
+checksum=6378a0dbe8d785f58ab9778a507e36c33a5f869ae1a670638e27787b9864e638
 
 lib32disabled=yes
 
-hostmakedepends="autoconf unzip zip pkg-config perl python3.11 yasm rust cargo
+hostmakedepends="autoconf unzip zip pkg-config perl python3 yasm rust cargo
  llvm clang nodejs cbindgen nasm which tar"
 makedepends="nss-devel libjpeg-turbo-devel gtk+3-devel icu-devel
  pixman-devel libevent-devel libnotify-devel libvpx-devel

@@ -1,6 +1,6 @@
 # Template file for 'ircdog'
 pkgname=ircdog
-version=0.5.2
+version=0.5.4
 revision=1
 build_style=go
 go_import_path="github.com/ergochat/ircdog"
@@ -10,7 +10,7 @@ license="ISC"
 homepage="https://github.com/ergochat/ircdog"
 changelog="https://raw.githubusercontent.com/ergochat/ircdog/master/CHANGELOG.md"
 distfiles="https://github.com/ergochat/ircdog/archive/refs/tags/v${version}.tar.gz"
-checksum=7d8f3ee04c0e15dc234f7962492ba6b9ddb4110d43fbfe849018ac2171fd626c
+checksum=700f1bfda4a26b66f8bbe4551ec2bc6f5b093cc3a6f2f1deff53135e84d463e5
 
 post_install() {
 	vlicense LICENSE

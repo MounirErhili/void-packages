@@ -1,6 +1,6 @@
 # Template file for 'dune'
 pkgname=dune
-version=3.13.0
+version=3.16.0
 revision=1
 makedepends="ocaml"
 depends="ocaml"
@@ -10,7 +10,7 @@ license="MIT"
 homepage="https://dune.build/"
 changelog="https://raw.githubusercontent.com/ocaml/dune/main/CHANGES.md"
 distfiles="https://github.com/ocaml/dune/releases/download/${version}/dune-${version}.tbz"
-checksum=f1801257e01c846bd71017ec5d4b2b75fd31b20a0d5979b933b37cc8453678de
+checksum=5481dde7918ca3121e02c34d74339f734b32d5883efb8c1b8056471e74f9bda6
 nocross="ocaml"
 
 _dune_release_pkgs="dune dune-build-info dune-configurator

@@ -1,6 +1,6 @@
 # Template file for 'python3-msoffcrypto-tool'
 pkgname=python3-msoffcrypto-tool
-version=5.3.1
+version=5.4.2
 revision=1
 build_style=python3-pep517
 hostmakedepends="python3-poetry-core"
@@ -11,7 +11,7 @@ maintainer="Andrew Benson <abenson+void@gmail.com>"
 license="MIT"
 homepage="https://github.com/nolze/msoffcrypto-tool"
 distfiles="${homepage}/archive/v${version}.tar.gz"
-checksum=f2e52dea8f486ee46141a21e3a5d458367aebbf95ca63d121e2db4f06b32feb8
+checksum=427bbf5d9e491c51fcf15fa462abaa7abf3827250f956533e7f69997ef186858
 make_check=extended
 
 post_install() {

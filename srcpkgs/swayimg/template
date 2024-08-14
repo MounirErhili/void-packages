@@ -1,6 +1,6 @@
 # Template file for 'swayimg'
 pkgname=swayimg
-version=2.1
+version=3.0
 revision=1
 build_style=meson
 configure_args="-D version=${version}"
@@ -14,7 +14,7 @@ maintainer="voidbert <humbertogilgomes@protonmail.com>"
 license="MIT"
 homepage="https://github.com/artemsen/swayimg"
 distfiles="https://github.com/artemsen/swayimg/archive/v${version}.tar.gz"
-checksum=d82fb8e75cdabf470677797444ec19b00c83e0e06d80be774727194404624e7e
+checksum=aaea410876aa461d6601f86d5c7bc2cf212a0ecfc28b2a602e53d0f383d710ca
 
 post_install() {
 	vcompletion extra/bash.completion bash

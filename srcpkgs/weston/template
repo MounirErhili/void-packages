@@ -1,6 +1,6 @@
 # Template file for 'weston'
 pkgname=weston
-version=13.0.0
+version=13.0.3
 revision=1
 build_style=meson
 configure_args=" $(vopt_bool vaapi backend-drm-screencast-vaapi) "
@@ -16,8 +16,8 @@ short_desc="Reference implementation of a Wayland compositor"
 maintainer="Daniel Martinez <danielmartinez@cock.li>"
 license="MIT"
 homepage="https://wayland.freedesktop.org/"
-distfiles="https://wayland.freedesktop.org/releases/${pkgname}-${version}.tar.xz"
-checksum=52ff1d4aa2394a2e416c85a338b627ce97fa71d43eb762fd4aaf145d36fc795a
+distfiles="https://gitlab.freedesktop.org/wayland/weston/-/releases/${version}/downloads/weston-${version}.tar.xz"
+checksum=27f68d96e3b97d98daadef13a202356524924fa381418fa6716b9136ef099093
 lib32disabled=yes
 replaces="weston-colord>=0"
 

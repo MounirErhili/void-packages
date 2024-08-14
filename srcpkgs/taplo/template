@@ -1,6 +1,6 @@
 # Template file for 'taplo'
 pkgname=taplo
-version=0.9.0
+version=0.9.3
 revision=1
 build_style=cargo
 # no-default-features: allows selecting custom feature set
@@ -14,9 +14,9 @@ short_desc="TOML toolkit written in Rust"
 maintainer="cinerea0 <cinerea0@protonmail.com>"
 license="MIT"
 homepage="https://taplo.tamasfe.dev/"
-changelog="https://github.com/tamasfe/taplo/releases"
+changelog="https://raw.githubusercontent.com/tamasfe/taplo/master/crates/taplo-cli/CHANGELOG.md"
 distfiles="https://github.com/tamasfe/taplo/archive/refs/tags/release-taplo-cli-${version}.tar.gz"
-checksum=7d292f52c2d97d9e9c447a725d6d4e59096fce10e2f72ec6b80387034c20ba35
+checksum=5744a06a1e93128f5cb5409d5bf5e553915703ec0491df9f4c7ab31dbe430287
 
 post_patch() {
 	cargo update --package pprof@0.9.1 --precise 0.13.0

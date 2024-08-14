@@ -1,8 +1,8 @@
 # Template file for 'Signal-Desktop'
 pkgname=Signal-Desktop
-version=6.46.0
+version=7.19.1
 revision=1
-# Signal officially only supports x86_64 
+# Signal officially only supports x86_64
 # x86_64-musl could potentially work based on the Alpine port:
 # https://git.alpinelinux.org/aports/tree/testing/signal-desktop
 # ARM: https://github.com/signalapp/Signal-Desktop/issues/3410
@@ -10,18 +10,18 @@ archs="x86_64"
 hostmakedepends="git git-lfs nodejs-lts python3 python3-distutils-extra tar"
 depends="cairo gtk+3 libvips pango"
 short_desc="Signal Private Messenger for Linux"
-maintainer="anelki <akierig@fastmail.de>"
+maintainer="Orphaned <orphan@voidlinux.org>"
 license="AGPL-3.0-only"
 homepage="https://github.com/signalapp/Signal-Desktop"
 distfiles="https://github.com/signalapp/Signal-Desktop/archive/v${version}.tar.gz"
-checksum=0961917d0c920246a01e77a8eba62bf7de3dde9ff83070e5ad6d4d9894a8ccb2
+checksum=2c5a9e457189f0d7cda18ee0de61f8c710cb37b363d7699a753c2501f728683f
 nostrip_files="signal-desktop"
 
 post_extract() {
 	# git-lfs hook needs to be installed for one of the dependencies
 	git lfs install
 
-	vsed 's/"node": "/&>=/' -i package.json
+	vsed 's/"node": ".*"/"node": ">=20.0.0"/' -i package.json
 
 	npm install -g yarn
 	# Dependencies have to be installed before applying patch
@@ -31,6 +31,10 @@ post_extract() {
 do_build() {
 	yarn generate
 	yarn build-release
+
+	bsdtar xOf release/signal-desktop_*.deb data.tar.xz | \
+		bsdtar xO ./usr/share/applications/signal-desktop.desktop > signal-desktop.desktop
+	vsed -i -e 's/\/opt\/Signal\///' signal-desktop.desktop
 }
 
 do_install() {
@@ -47,12 +51,11 @@ do_install() {
 	vmkdir usr/bin
 	ln -s /usr/lib/signal-desktop/signal-desktop ${DESTDIR}/usr/bin/
 
-	vmkdir usr/share/applications
-	vinstall ${FILESDIR}/signal.desktop 644 usr/share/applications/
+	vinstall signal-desktop.desktop 644 usr/share/applications
 
 	vmkdir usr/share/icons/hicolor
 	for size in 16 32 256; do
-		vinstall images/icon_${size}.png 644 usr/share/icons/hicolor/${size}x${size}/apps/ signal.png
+		vinstall images/icon_${size}.png 644 usr/share/icons/hicolor/${size}x${size}/apps/ signal-desktop.png
 	done
 
 	vlicense LICENSE

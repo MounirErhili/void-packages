@@ -1,19 +1,31 @@
 # Template file for 'gitoxide'
 pkgname=gitoxide
-version=0.32.0
+version=0.37.0
 revision=1
 build_style=cargo
-hostmakedepends="pkg-config cmake"
-makedepends="zlib-devel openssl-devel"
+build_helper=qemu
+configure_args="
+ --no-default-features
+ --features max-control,gix-features/zlib-stock,gitoxide-core-blocking-client,http-client-curl
+"
+hostmakedepends="pkg-config"
+makedepends="zlib-devel sqlite-devel libcurl-devel"
 short_desc="Idiomatic, lean, fast and safe pure Rust implementation of Git"
-maintainer="Jan Christian Grünhage <jan.christian@gruenhage.xyz>"
+maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT, Apache-2.0"
 homepage="https://github.com/Byron/gitoxide"
 changelog="https://github.com/Byron/gitoxide/raw/main/CHANGELOG.md"
 distfiles="https://github.com/Byron/gitoxide/archive/refs/tags/v${version}.tar.gz"
-checksum=5a17da0379254bd996fe1888de4104d551a41bdd8bd4b93034f9d0757382fa75
+checksum=1bdc30bafdd3605d6e278aa5562f772a9732bb07ced9321ea31893b28f950c0a
 
 post_install() {
 	vlicense LICENSE-APACHE
 	vlicense LICENSE-MIT
+
+	for _shell in bash fish zsh; do
+		vtargetrun ${DESTDIR}/usr/bin/ein completions -s ${_shell} > ein.${_shell}
+		vtargetrun ${DESTDIR}/usr/bin/gix completions -s ${_shell} > gix.${_shell}
+		vcompletion ein.${_shell} ${_shell} ein
+		vcompletion gix.${_shell} ${_shell} gix
+	done
 }

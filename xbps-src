@@ -9,6 +9,13 @@ print_cross_targets() {
 }
 
 usage() {
+    # copied from main logic because this is run before XBPS_DISTDIR is set normally
+    local _distdir="$(readlink -f "${0%/*}")"
+    if [ "${_distdir}" = "." ]; then
+        readonly XBPS_DISTDIR="$(pwd -P)"
+    else
+        readonly XBPS_DISTDIR="${_distdir}"
+    fi
     cat << _EOF
 $PROGNAME: [options] <target> [arguments]
 
@@ -93,6 +100,9 @@ show-avail <pkgname>
 
 show-build-deps <pkgname>
     Show required build dependencies for <pkgname>.
+
+show-check-deps <pkgname>
+    Show required check dependencies for <pkgname>.
 
 show-deps <pkgname>
     Show required run-time dependencies for <pkgname>. Package must be
@@ -536,6 +546,8 @@ fi
 # unless in a container for simplicity of container/CI usage
 if [ "$XBPS_CHROOT_CMD" = ethereal ]; then
     : "${XBPS_MASTERDIR:=$XBPS_DISTDIR/masterdir}"
+elif [ -n "$XBPS_ARG_MASTERDIR" ]; then
+    : # Don't mess with masterdir in argv
 else
     : "${XBPS_MASTERDIR:=$XBPS_DISTDIR/masterdir-$XBPS_MACHINE}"
     # but use $XBPS_DISTDIR/masterdir if it exists and the new style doesn't
@@ -556,13 +568,14 @@ if [ -d "$XBPS_MASTERDIR" -a ! -w "$XBPS_MASTERDIR" ]; then
 fi
 
 # Try using chroot-git then git from the host system
-if command -v chroot-git &>/dev/null; then
-    export XBPS_GIT_CMD=$(command -v chroot-git)
-elif command -v git &>/dev/null; then
-    export XBPS_GIT_CMD=$(command -v git)
+XBPS_GIT_CMD="$(PATH="/usr/libexec/chroot-git:$PATH:$XBPS_MASTERDIR/usr/libexec/chroot-git" command -v git 2>/dev/null)"
+if [ -n "$XBPS_GIT_CMD" ]; then
+    export XBPS_GIT_CMD
 elif [ -z "$XBPS_USE_BUILD_MTIME" ] || [ "$XBPS_USE_GIT_REVS" ]; then
     echo "neither chroot-git or git are available in your system!" 1>&2
     exit 1
+else
+    unset XBPS_GIT_CMD
 fi
 
 if [ -n "$XBPS_HOSTDIR" ]; then
@@ -894,6 +907,10 @@ case "$XBPS_TARGET" in
     show-makedepends)
         read_pkg ignore-problems
         show_pkg_makedepends
+        ;;
+    show-checkdepends)
+        read_pkg ignore-problems
+        show_pkg_checkdepends
         ;;
     show-pkg-var-dump)
         read_pkg ignore-problems

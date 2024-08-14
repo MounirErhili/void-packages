@@ -1,8 +1,8 @@
 # Template file for 'ImageMagick'
 pkgname=ImageMagick
 # Revbump php*-imagick with ImageMagick updates.
-version=7.1.1.18
-revision=2
+version=7.1.1.36
+revision=1
 _upstream_version="${version/.${version##*.}/-${version##*.}}"
 build_style=gnu-configure
 configure_args="--disable-static --enable-opencl --with-modules --with-gslib
@@ -20,7 +20,7 @@ license="ImageMagick"
 homepage="https://www.imagemagick.org"
 changelog="https://raw.githubusercontent.com/ImageMagick/Website/main/ChangeLog.md"
 distfiles="https://github.com/ImageMagick/ImageMagick/archive/${_upstream_version}.tar.gz"
-checksum=77a49a5b7c8c5e85f21ce7ecb9e2a090de6b07a185090c9729577687729b7f18
+checksum=cb2925aadf126177f13f670c8ac47ba9a90d012f075ed50f936d141d160e3e97
 
 subpackages="libmagick libmagick-devel"
 
@@ -77,6 +77,7 @@ libmagick-devel_package() {
 libmagick-perl_package() {
 	short_desc="ImageMagick perl library bindings"
 	pkg_install() {
+		mv ${DESTDIR}/usr/man/man3 ${DESTDIR}/usr/share/man/
 		vmove usr/lib/perl5
 		vmove usr/share/man/man3
 	}

@@ -1,6 +1,6 @@
 # Template file for 'gum'
 pkgname=gum
-version=0.13.0
+version=0.14.3
 revision=1
 build_style=go
 build_helper=qemu
@@ -12,7 +12,7 @@ license="MIT"
 homepage="https://github.com/charmbracelet/gum"
 changelog="https://github.com/charmbracelet/gum/releases"
 distfiles="https://github.com/charmbracelet/gum/archive/refs/tags/v${version}.tar.gz"
-checksum=329a38f3453b4be1f00e1fcb987aacf574fe3a8cc592084529c05716ddf4e7c4
+checksum=954e37c4c35e877bffd5bec7c794bee254db95f8a4e005136d94c7db456db398
 
 post_install() {
 	vlicense LICENSE

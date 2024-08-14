@@ -1,16 +1,16 @@
 # Template file for 'c-ares'
 pkgname=c-ares
-version=1.26.0
+version=1.33.0
 revision=1
 build_style=gnu-configure
 checkdepends="iana-etc"
 short_desc="Library for asynchronous DNS requests"
 maintainer="Duncaen <duncaen@voidlinux.org>"
 license="MIT"
-homepage="https://c-ares.haxx.se/"
-changelog="https://c-ares.haxx.se/changelog.html"
-distfiles="https://c-ares.haxx.se/download/c-ares-${version}.tar.gz"
-checksum=bed58c4f02b009080ebda6c2467ba469722ac6aebbf4497dc44a83d8c6194e50
+homepage="https://c-ares.org/"
+changelog="https://c-ares.org/changelog.html"
+distfiles="https://github.com/c-ares/c-ares/releases/download/v${version}/c-ares-${version}.tar.gz"
+checksum=3e41df2f172041eb4ecb754a464c11ccc5046b2a1c8b1d6a40dac45d3a3b2346
 make_check=ci-skip # segfaults only on CI
 
 post_install() {

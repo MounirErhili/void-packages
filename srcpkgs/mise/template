@@ -1,19 +1,18 @@
 # Template file for 'mise'
 pkgname=mise
-version=2024.2.16
+version=2024.8.5
 revision=1
 build_style=cargo
-# skip cli tests: fail to find executable
-make_check_args="-- --skip cli::direnv::exec::tests"
-hostmakedepends="pkg-config"
-makedepends="openssl-devel"
+make_check_args="-- --skip cli --skip runtime_symlinks::tests::test_list_symlinks"
+hostmakedepends="pkg-config libgit2-1.8-devel"
+makedepends="openssl-devel libgit2-1.8-devel"
 short_desc="Polyglot runtime manager (asdf rust clone)"
 maintainer="Daniel Lewan <daniel@teddydd.me>"
 license="MIT"
 homepage="https://github.com/jdx/mise"
 changelog="https://github.com/jdx/mise/releases"
 distfiles="https://github.com/jdx/mise/archive/v${version}.tar.gz>${pkgname}-${version}.tar.gz"
-checksum=5584f9804b300303f98bc423d8a257433e21f099976be353188bf6272c8029c5
+checksum=38a7d5da54b8089202c7fc576a0310cc06a422e4ee2e3c5980439eb2e602495a
 
 post_install() {
 	vlicense LICENSE

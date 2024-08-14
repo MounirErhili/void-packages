@@ -1,17 +1,17 @@
 # Template file for 'comrak'
 pkgname=comrak
-version=0.21.0
+version=0.26.0
 revision=1
 build_style=cargo
 hostmakedepends="pkg-config"
 makedepends="oniguruma-devel"
 short_desc="CommonMark + GFM compatible Markdown parser and renderer"
-maintainer="jcgruenhage <jan.christian@gruenhage.xyz>"
+maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
 homepage="https://github.com/kivikakk/comrak"
-changelog="https://github.com/kivikakk/comrak/raw/main/changelog.txt"
-distfiles="https://github.com/kivikakk/comrak/archive/refs/tags/${version}.tar.gz"
-checksum=1436cca216cfa84b96419d4337af7b6fddef26228c68006af46a459dba2c945e
+changelog="https://raw.githubusercontent.com/kivikakk/comrak/main/changelog.txt"
+distfiles="https://github.com/kivikakk/comrak/archive/refs/tags/v${version}.tar.gz"
+checksum=d2024f260caf4e403043b66acfacb4923bcb4cb66017fa10a8603e8e8749d145
 
 post_install() {
 	vlicense COPYING
