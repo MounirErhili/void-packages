@@ -1,6 +1,6 @@
 # Template file for 'eza'
 pkgname=eza
-version=0.19.0
+version=0.19.2
 revision=1
 build_style=cargo
 hostmakedepends="pkg-config"
@@ -12,8 +12,8 @@ homepage="https://eza.rocks"
 changelog="https://raw.githubusercontent.com/eza-community/eza/main/CHANGELOG.md"
 distfiles="https://github.com/eza-community/eza/archive/refs/tags/v${version}.tar.gz
  https://github.com/eza-community/eza/releases/download/v${version}/man-${version}.tar.gz"
-checksum="440fff093c23635d7c1a9955d42489a2f5c5839a0e85a03e39daeca39e9dbf84
- 5d367319400f2172822e4f46701a593619bb7f0eed4064c6831713b94c027f42"
+checksum="db4897ef7f58d0802620180e0b13bb35563e03c9de66624206b35dcad21007f8
+ 9a48d6e06b54bb849393356672e6da617f0ae1432abd2c72222f6b510bbf6560"
 
 skip_extraction="man-${version}.tar.gz"
 

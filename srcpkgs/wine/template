@@ -1,6 +1,6 @@
 # Template file for 'wine'
 pkgname=wine
-version=9.15
+version=9.17
 revision=1
 _pkgver=${version/r/-r}
 create_wrksrc=yes
@@ -13,8 +13,8 @@ license="LGPL-2.1-or-later"
 homepage="http://www.winehq.org/"
 distfiles="https://dl.winehq.org/wine/source/${version%.*}.x/wine-${_pkgver}.tar.xz
  https://github.com/wine-staging/wine-staging/archive/v${_pkgver}.tar.gz"
-checksum="79adef436dd68ddbd70178670a3c23aa98e8afd5540ac0f42345894c458b78dd
- 1534258ee6cd8cb853c650193644ea4a08357b5c9ca1345fe3efb798a3acf70e"
+checksum="3edb7eb6f31bb5c3f7378dd5623da9d95f7d4d6d7c8378afd89c8e3a30aa080c
+ 8b75c8fe4802eb00084b7b7c274a9941f06b28ed6496efa612476b9760852392"
 
 # NOTE: wine depends on specific versions of wine-mono and wine-gecko,
 # check for updates to these packages when updating wine
@@ -93,6 +93,7 @@ fi
 
 post_patch() {
 	if [ "${build_option_staging}" ]; then
+		export PATH="/usr/libexec/chroot-git:${PATH}"
 		"../wine-staging-${_pkgver}/staging/patchinstall.py" --all
 	fi
 }

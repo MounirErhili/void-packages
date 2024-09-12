@@ -1,6 +1,6 @@
 # Template file for 'qsv'
 pkgname=qsv
-version=0.130.0
+version=0.133.1
 revision=1
 archs="x86_64* i686* aarch64* arm*" # ring
 build_style=cargo
@@ -14,7 +14,7 @@ license="Unlicense"
 homepage="https://qsv.dathere.com"
 changelog="https://raw.githubusercontent.com/jqnatividad/qsv/master/CHANGELOG.md"
 distfiles="https://github.com/jqnatividad/qsv/archive/refs/tags/${version}.tar.gz"
-checksum=d87d8420e79ec3482b2b9d0851938401309886ba7825e870883b9a397828c922
+checksum=f2f59c07ea8d84d527641b6f6c2e1eeff114d04860d2904a2b85361ea62db204
 
 if [ "$XBPS_TARGET_NO_ATOMIC8" ]; then
 	XBPS_CROSS_RUSTFLAGS+=" -latomic"
