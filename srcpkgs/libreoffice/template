@@ -1,6 +1,6 @@
 # Template file for 'libreoffice'
 pkgname=libreoffice
-version=24.8.0.3
+version=24.8.3.2
 revision=2
 build_style=meta
 build_helper="gir"
@@ -19,10 +19,10 @@ _xdeps="zlib-devel libjpeg-turbo-devel clucene-devel expat-devel xmlsec1-devel
  CoinMP-devel lpsolve-devel libexttextcat-devel libnumbertext-devel
  libepoxy-devel cairo-devel liblangtag-devel libpng-devel tiff-devel
  libwebp-devel fontconfig-devel libcmis-devel
- gobject-introspection libgirepository-devel"
+ gobject-introspection libgirepository-devel libglib-devel"
 hostmakedepends="automake flex gperf hyphen icu libtool openldap which gettext xz
  tar perl-Archive-Zip pkg-config sane unzip zip python3-setuptools
- fontforge python3-lxml qt6-base gnupg
+ fontforge python3-lxml qt6-base gnupg glib-devel
  $(vopt_if java 'openjdk17 apache-ant beanshell rhino hsqldb1.8.0')"
 makedepends="$_xdeps openssl-devel libXrender-devel libbluetooth-devel
  gpgmepp-devel libXinerama-devel libXt-devel libX11-devel libICE-devel
@@ -96,9 +96,9 @@ distfiles="
  ${_addurl}/Java-WebSocket-1.5.6.tar.gz
  ${_addurl}/zxcvbn-c-2.5.tar.gz
 "
-checksum="5b11468cd1b68c05c33b151fcd7d044eea0c7e1dbf4bda028b490e18df7d78c1
- 7653e34fa2139fa6818d644208a0fc9e4e43be18d669c020f38c8dab161671ed
- 5e2706a6b0339b3424a3fb75c83b73817603722baf8fa11a9b84dc9a65ece55c
+checksum="5d709bac629d550b3ff3b7866f7758820a0badbfba06b9cfb946ec037b5f47e9
+ 1e5dc8c6f9f9842d181770155bd5750366152ea0d091f2620ad90464bf3ce713
+ 0a9c916e7ef6cae8cf1693e87874468c387efc2adc15e5d3208fa028ec5c1c87
  75823776fb51a9c526af904f1503a7afaaab900fba83eda64f8a41073724c870
  7d2797fe9f79a77009721e3f14fa4a1dec17a6d706bdc93f85f1f01d124fab66
  e2d9224e0e50fc8ad12a3cf47396bbcadf45b2515839d4770432653a88972c00

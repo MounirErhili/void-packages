@@ -1,18 +1,18 @@
 # Template file for 'nushell'
 pkgname=nushell
-version=0.97.1
+version=0.101.0
 revision=1
 build_style=cargo
 hostmakedepends="pkg-config"
-makedepends="openssl-devel libgit2-devel libzstd-devel sqlite-devel"
+makedepends="openssl-devel sqlite-devel"
 depends="mimalloc"
 short_desc="Modern shell for the GitHub era"
-maintainer="Orphaned <orphan@voidlinux.org>"
+maintainer="Saksham <voidisnull@duck.com>"
 license="MIT"
 homepage="https://www.nushell.sh/"
 changelog="https://www.nushell.sh/blog/"
 distfiles="https://github.com/nushell/nushell/archive/refs/tags/${version}.tar.gz"
-checksum=e605d5a7f104b7f2bf99197ca2f34a4a68f68cc12ecab41f606113e6a65b67b1
+checksum=43e4a123e86f0fb4754e40d0e2962b69a04f8c2d58470f47cb9be81daabab347
 register_shell="/usr/bin/nu"
 # all tests fail with argument --target
 make_check=no
@@ -27,7 +27,4 @@ fi
 
 post_install() {
 	vlicense LICENSE
-	vsconf crates/nu-utils/src/sample_config/default_config.nu
-	vsconf crates/nu-utils/src/sample_config/default_env.nu
-	vsconf crates/nu-utils/src/sample_config/sample_login.nu
 }

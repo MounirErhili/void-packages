@@ -1,7 +1,7 @@
 # Template file for 'xml2rfc'
 pkgname=xml2rfc
-version=3.23.0
-revision=1
+version=3.25.0
+revision=2
 build_style=python3-module
 hostmakedepends="python3-setuptools"
 depends="python3-appdirs python3-ConfigArgParse python3-html5lib
@@ -13,7 +13,7 @@ maintainer="Andrew Benson <abenson+void@gmail.com>"
 license="BSD-3-Clause"
 homepage="https://ietf-tools.github.io/xml2rfc/"
 distfiles="https://github.com/ietf-tools/xml2rfc/releases/download/v${version}/xml2rfc-${version}.tar.gz"
-checksum=f6743e210df80a8aba0c791f74e9c4e799567dd9111307def171d8a097941039
+checksum=0dcf2cbd0fea0c8be9a3d4b22c721687120b50753524ad5ec3af1cc2c38c05f2
 make_check=no # too many dependencies
 
 post_install() {

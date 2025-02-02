@@ -1,6 +1,6 @@
 # Template file for 'conky'
 pkgname=conky
-version=1.21.4
+version=1.22.0
 revision=1
 build_style=cmake
 conf_files="/etc/conky/conky.conf /etc/conky/conky_no_x11.conf"
@@ -19,11 +19,15 @@ license="BSD-3-Clause, GPL-3.0-or-later"
 homepage="https://github.com/brndnmtthws/conky"
 distfiles="https://github.com/brndnmtthws/conky/archive/v${version}.tar.gz
  https://github.com/brndnmtthws/conky/releases/download/v${version}/conky.1.gz"
-checksum="567607122272f4d7d9c2665319b5c17c1aab1f953d388fbfcf4b22c5acab4480
- ce4d49dd9e1f9eafe668c21c456ad81257fff6975139e0bf0806e3d3f1ff19ed"
+checksum="8633b78e6c0c9e7128efc9fe54b48df75a3860928e3fb101bcf71f6fb3844959
+ 4e2f31b09deb60f289f74d9e7f75e2e987ee0c5d400fc4cbf4ef2b60fe457295"
 
 post_extract() {
 	mv conky-*/* .
+	if [ -n "$CROSS_BUILD" ] ; then
+		# some tests are in 'build()' now, 'make_check' does nothing
+		echo "" > cmake/CatchAddTests.cmake
+	fi
 }
 
 post_configure() { # conky-cli

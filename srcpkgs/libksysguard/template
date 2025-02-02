@@ -1,13 +1,13 @@
 # Template file for 'libksysguard'
 pkgname=libksysguard
-version=6.1.4
+version=6.2.5
 revision=1
 build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QMLDIR=lib/qt6/qml
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
 hostmakedepends="extra-cmake-modules gettext pkg-config qt6-tools qt6-base
- kf6-kauth-tools kf6-kpackage kf6-kconfig"
+ qt6-declarative-host-tools kf6-kauth-tools kf6-kpackage kf6-kconfig"
 makedepends="qt6-webchannel-devel kf6-knewstuff-devel libpcap-devel libcap-devel
  libcap-devel libnl3-devel libsensors-devel kf6-ki18n-devel kf6-kconfig-devel
  kf6-kiconthemes-devel kf6-kauth-devel kf6-solid-devel kf6-kservice-devel
@@ -17,7 +17,7 @@ maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.1-or-later"
 homepage="https://invent.kde.org/plasma/libksysguard"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
-checksum=d2a7aebc9571ce81b4ca79095b74a0d91829c249303d22462038203a4c56c5b1
+checksum=9694f3d6b5078b4d82eb8e6ed34eb20e2d109ed7c2234c59a640bc32f31c76ab
 
 build_options="webengine"
 

@@ -1,6 +1,6 @@
 # Template file for 'juk'
 pkgname=juk
-version=24.08.0
+version=24.12.1
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
@@ -19,4 +19,4 @@ maintainer="John <me@johnnynator.dev>"
 license="GPL-2.0-or-later"
 homepage="https://juk.kde.org/"
 distfiles="${KDE_SITE}/release-service/${version}/src/juk-${version}.tar.xz"
-checksum=679b70c25f4014ecdced955a41ad0ef93291e1905d82a15f2cc26c0d7acf2684
+checksum=5a8ec124824ad3591fb24dcd1b86a542835766588a0a25b94cbf9c443ebb9e3a

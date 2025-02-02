@@ -1,6 +1,6 @@
 # Template file for 'yoshimi'
 pkgname=yoshimi
-version=2.3.2
+version=2.3.3.2
 revision=1
 build_wrksrc=src
 build_style=cmake
@@ -13,7 +13,7 @@ maintainer="Andrea Brancaleoni <abc@pompel.me>"
 license="GPL-2.0-or-later"
 homepage="https://yoshimi.github.io/"
 distfiles="https://github.com/Yoshimi/$pkgname/archive/$version.tar.gz"
-checksum=76fcf0aaf959665f4d1a54c8e76dc30108bcf1434f76a0761e13217f973f27f6
+checksum=edeeeb97d199396293b85296fb66157685bfcee69ca510327870525531803f8f
 
 case "$XBPS_TARGET_MACHINE" in
 	*-musl) makedepends+=" argp-standalone";;

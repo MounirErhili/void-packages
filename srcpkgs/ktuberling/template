@@ -1,6 +1,6 @@
 # Template file for 'ktuberling'
 pkgname=ktuberling
-version=24.08.0
+version=24.12.1
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
@@ -15,4 +15,4 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://kde.org/applications/games/org.kde.ktuberling"
 distfiles="${KDE_SITE}/release-service/${version}/src/ktuberling-${version}.tar.xz"
-checksum=dd4df1598a1944a773c3760a81c4a7265d1ef1403cc77cdbb9ee6865c98c5790
+checksum=44f9bceddf80563ad19ff38b98e5fb102001299d94ebf17abf81a59d61cc742e

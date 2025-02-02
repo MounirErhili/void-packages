@@ -1,6 +1,6 @@
 # Template file for 'plasma-workspace'
 pkgname=plasma-workspace
-version=6.1.4
+version=6.2.5
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -20,17 +20,17 @@ makedepends="qt6-declarative-devel libplasma-devel qt6-base-private-devel
  plasma-activities-stats-devel kf6-kwallet-devel plasma-activities-devel
  kf6-kded-devel kf6-networkmanager-qt-devel kf6-kirigami-devel
  kf6-ksvg-devel kf6-kdeclarative-devel kf6-kwayland-devel
- kscreenlocker-devel plasma-wayland-protocols
+ kscreenlocker-devel plasma-wayland-protocols qt6-position-devel
  kf6-kuserfeedback-devel phonon-devel polkit-qt6-devel qt6-wayland-private-devel
  kpipewire-devel kirigami-addons-devel libkexiv2-devel qcoro-qt6-devel"
-depends="kactivitymanagerd kwin iso-codes milou plasma-integration
+depends="kactivitymanagerd kwin iso-codes milou plasma-integration kpipewire
  qt6-wayland xorg-server-xwayland qt6-tools kf6-kquickcharts kirigami-addons"
 short_desc="KDE Window manager"
 maintainer="John <me@johnnynator.dev>"
 license="GPL-2.0-or-later, GFDL-1.2-or-later, LGPL-2.1-or-later"
 homepage="https://invent.kde.org/plasma/plasma-workspace"
-distfiles="${KDE_SITE}/plasma/${version:0:5}/${pkgname}-${version}.tar.xz"
-checksum=cb2099dd39c0b23ff4b05c8cf657845187075d31f75fe41f0fe01edce56c8d56
+distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
+checksum=b82511e46f62e1b8f60b969c828c8d8d32fc7928401a70cc28c29f85f46c412f
 
 if [ "$XBPS_TARGET_LIBC" = "glibc" ]; then
 	makedepends+=" libxcrypt-devel"

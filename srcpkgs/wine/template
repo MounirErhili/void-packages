@@ -1,6 +1,6 @@
 # Template file for 'wine'
 pkgname=wine
-version=9.17
+version=10.0
 revision=1
 _pkgver=${version/r/-r}
 create_wrksrc=yes
@@ -11,10 +11,10 @@ short_desc="Run Microsoft Windows applications"
 maintainer="Helmut Pozimski <helmut@pozimski.eu>"
 license="LGPL-2.1-or-later"
 homepage="http://www.winehq.org/"
-distfiles="https://dl.winehq.org/wine/source/${version%.*}.x/wine-${_pkgver}.tar.xz
+distfiles="https://dl.winehq.org/wine/source/${version%.*}.0/wine-${_pkgver}.tar.xz
  https://github.com/wine-staging/wine-staging/archive/v${_pkgver}.tar.gz"
-checksum="3edb7eb6f31bb5c3f7378dd5623da9d95f7d4d6d7c8378afd89c8e3a30aa080c
- 8b75c8fe4802eb00084b7b7c274a9941f06b28ed6496efa612476b9760852392"
+checksum="c5e0b3f5f7efafb30e9cd4d9c624b85c583171d33549d933cd3402f341ac3601
+ 59eb36a2d9786d28242901458b282d49430bdbacf801af575566dcfc6c2943ea"
 
 # NOTE: wine depends on specific versions of wine-mono and wine-gecko,
 # check for updates to these packages when updating wine
@@ -73,6 +73,7 @@ if [ "$XBPS_TARGET_WORDSIZE" != 32 ]; then
 else
 	_wineserver_suffix="32"
 	CFLAGS=" -D_LARGE_FILE_SOURCE=1 -D_FILE_OFFSET_BITS=64"
+	CPPFLAGS=" -D_LARGE_FILE_SOURCE=1 -D_FILE_OFFSET_BITS=64"
 fi
 
 if [ "$XBPS_LIBC" = "glibc" ]; then

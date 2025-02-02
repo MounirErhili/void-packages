@@ -1,11 +1,11 @@
 # Template file for 'rio'
 pkgname=rio
-version=0.1.13
+version=0.2.5
 revision=1
 build_style=cargo
 build_wrksrc="frontends/rioterm"
 hostmakedepends="pkg-config"
-makedepends="fontconfig-devel freetype-devel libglvnd-devel libxcb-devel libxkbcommon-devel wayland-devel"
+makedepends="libglvnd-devel libxcb-devel libxkbcommon-devel wayland-devel"
 depends="rio-terminfo-${version}_${revision}"
 short_desc="Hardware-accelerated GPU terminal emulator powered by WebGPU"
 maintainer="tranzystorekk <tranzystorek.io@protonmail.com>"
@@ -13,7 +13,7 @@ license="MIT"
 homepage="https://raphamorim.io/rio/"
 changelog="https://raw.githubusercontent.com/raphamorim/rio/main/CHANGELOG.md"
 distfiles="https://github.com/raphamorim/rio/archive/refs/tags/v${version}.tar.gz"
-checksum=7baa5e76430e6ca62643691875eb20e66fe793cc260cc409fd63aa3e6d014299
+checksum=03fb35ae46d3dcb48f3ea193854c8ad959018c364e5b632e0130970d0f18cddd
 
 post_install() {
 	vinstall ${wrksrc}/misc/logo.svg 644 usr/share/icons/hicolor/scalable/apps rio.svg

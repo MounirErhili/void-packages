@@ -1,6 +1,6 @@
 # Template file for 'kget'
 pkgname=kget
-version=24.08.0
+version=24.12.1
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
@@ -18,7 +18,7 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://invent.kde.org/network/kget"
 distfiles="${KDE_SITE}/release-service/${version}/src/${pkgname}-${version}.tar.xz"
-checksum=d7383f2b3f5d98723c97345d2f89dd3ba55c449cce4e642ade21f23780bf4d5d
+checksum=76e898f7ccacee77628304e2bd09298070d787b8e6c0cc17697c31d66afe475e
 do_check() {
 	cd build
 	# verifiertest is broken

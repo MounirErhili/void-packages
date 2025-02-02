@@ -1,6 +1,6 @@
 # Template file for 'erlang_ls'
 pkgname=erlang_ls
-version=0.52.0
+version=1.1.0
 revision=1
 build_style=gnu-makefile
 make_build_args="PREFIX=/usr"
@@ -11,7 +11,7 @@ maintainer="Emil Tomczyk <emru@emru.xyz>"
 license="Apache-2.0"
 homepage="https://erlang-ls.github.io/"
 distfiles="https://github.com/erlang-ls/erlang_ls/archive/refs/tags/${version}.tar.gz"
-checksum=8c9028cc65985746abc8736703381c04f0922116ef8cc7711bee09953432d968
+checksum=b826edae46219a90ab6a162be1626e2f4b0fd60cb2f3372d7a171ee3921aebf0
 
 export PATH="/usr/libexec/chroot-git:$PATH"
 

@@ -1,6 +1,6 @@
 # Template file for 'gnome-sudoku'
 pkgname=gnome-sudoku
-version=46.4
+version=47.1
 revision=1
 build_style=meson
 hostmakedepends="gettext glib-devel itstool pkg-config vala
@@ -13,4 +13,4 @@ license="GPL-3.0-or-later"
 homepage="https://gitlab.gnome.org/GNOME/gnome-sudoku/-/wikis/home"
 changelog="https://gitlab.gnome.org/GNOME/gnome-sudoku/-/raw/master/NEWS"
 distfiles="${GNOME_SITE}/gnome-sudoku/${version%.*}/gnome-sudoku-${version}.tar.xz"
-checksum=4a6b0c4506e89512253b1c993b73f640e8efd9ac1f1eb52a024819087623a4a2
+checksum=11c838598a74a3780f91bf6511aa4496ae4e36ecfafbbe41c2551b8144b2f305

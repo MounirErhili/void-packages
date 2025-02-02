@@ -1,6 +1,6 @@
 # Template file for 'plasma5support'
 pkgname=plasma5support
-version=6.1.4
+version=6.2.5
 revision=1
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -9,13 +9,13 @@ hostmakedepends="extra-cmake-modules qt6-base qt6-tools gettext
  qt6-declarative-host-tools"
 makedepends="qt6-declarative-devel kf6-kconfig-devel kf6-ki18n-devel
  kf6-kcoreaddons-devel kf6-knotifications-devel kf6-kguiaddons-devel
- kf6-solid-devel libksysguard-devel"
+ kf6-solid-devel libksysguard-devel kf6-kio-devel"
 short_desc="Support components for porting from KF5/Qt5 to KF6/Qt6"
 maintainer="John <me@johnnynator.dev>"
 license="GPL-3.0-or-later"
 homepage="https://invent.kde.org/plasma/plasma5support"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
-checksum=c99fd50d6496f7cf123d11e376790bcbcd6c80670af7e903ee0295ad42dd44d6
+checksum=cac5244aa2961ad020ed2c43427389e0823482ecb179948b5fd6b221606e8b04
 
 do_check() {
 	cd build

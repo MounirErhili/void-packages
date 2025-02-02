@@ -1,13 +1,13 @@
 # Template file for 'acme.sh'
 pkgname=acme.sh
-version=3.0.7
+version=3.1.0
 revision=1
 short_desc="Pure Unix shell script implementing ACME client protocol"
 maintainer="Emil Miler <em@0x45.cz>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/acmesh-official/acme.sh"
 distfiles="https://github.com/acmesh-official/acme.sh/archive/refs/tags/${version}.tar.gz"
-checksum=abd446d6bd45d0b44dca1dcbd931348797a3f82d1ed6fb171472eaf851a8d849
+checksum=5bc8a72095e16a1a177d1a516728bbd3436abf8060232d5d36b462fce74447aa
 
 do_install() {
 	vmkdir usr/share/acme.sh/deploy
