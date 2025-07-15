@@ -1,6 +1,6 @@
 # Template file for 'mise'
 pkgname=mise
-version=2025.5.6
+version=2025.7.1
 revision=1
 build_style=cargo
 hostmakedepends="pkg-config"
@@ -11,7 +11,7 @@ license="MIT"
 homepage="https://github.com/jdx/mise"
 changelog="https://github.com/jdx/mise/releases"
 distfiles="https://github.com/jdx/mise/archive/v${version}.tar.gz>${pkgname}-${version}.tar.gz"
-checksum=81d32a117dfe0b602aaea4fbf11875cbd0853d7f4df83d2a60328ffea22f1213
+checksum=744235ded50ef72598b26a5cea7ca16d9d526be410ccffe19b9011e22fca46a5
 
 post_install() {
 	vlicense LICENSE
@@ -25,5 +25,5 @@ post_install() {
 rtx_package() {
 	depends="${sourcepkg}>=${version}_${revision}"
 	short_desc+=" (transitional dummy package)"
-	build_style=meta
+	metapackage=yes
 }

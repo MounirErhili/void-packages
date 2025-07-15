@@ -34,7 +34,7 @@ makedepends="libXrender-devel libXtst-devel libXt-devel libXrandr-devel
  fontconfig-devel zlib-devel lcms2-devel"
 depends="${pkgname}-jre-${version}_${revision}"
 short_desc="OpenJDK Java Development Kit (version ${_java_ver})"
-maintainer="Kyle Nusbaum <knusbaum+void@sdf.org>"
+maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only WITH Classpath-exception-2.0"
 homepage="http://openjdk.java.net/"
 distfiles="https://github.com/openjdk/jdk${_java_ver}u/archive/jdk-${version}.tar.gz"
@@ -152,7 +152,7 @@ openjdk11-doc_package() {
 	noshlibprovides=yes
 	short_desc+=" - documentation"
 	if [ -z "$build_option_docs" ]; then
-		build_style=meta
+		metapackage=yes
 	fi
 	pkg_install() {
 		cd ${wrksrc}
@@ -193,5 +193,5 @@ openjdk11-bin_package() {
 	reverts="11+28_1 11+28_2"
 	short_desc+=" (transitional dummy package)"
 	depends="${sourcepkg}>=${version}_${revision}"
-	build_style=meta
+	metapackage=yes
 }

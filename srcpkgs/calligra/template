@@ -1,7 +1,7 @@
 # Template file for 'calligra'
 pkgname=calligra
 version=3.2.1
-revision=25
+revision=26
 build_style=cmake
 configure_args="-Wno-dev -DCALLIGRA_SHOULD_BUILD_UNMAINTAINED=ON
  -DMEINPROC5_EXECUTABLE=/usr/bin/meinproc5 -DBUILD_TESTING=OFF"
@@ -105,7 +105,7 @@ calligra-karbon_package() {
 }
 
 calligra-kexi_package() {
-	build_style=meta
+	metapackage=yes
 	depends="kexi"
 	short_desc+=" - Develop desktop db apps (transitional dummy package)"
 }
@@ -119,7 +119,7 @@ calligra-stage_package() {
 }
 
 calligra-krita_package() {
-	build_style=meta
+	metapackage=yes
 	short_desc+=" - Edit and paint images (transitional dummy package)"
 	depends="krita>=${version}_${revision}"
 }
@@ -142,7 +142,7 @@ calligra-words_package() {
 }
 
 calligra-handbook_package() {
-	build_style=meta
+	metapackage=yes
 	short_desc+=" - Documentation (removed temporarily)"
 	#pkg_install() {
 	#	DESTDIR=$PKGDESTDIR \

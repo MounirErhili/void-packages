@@ -1,6 +1,6 @@
 # Template file for 'python3-narwhals'
 pkgname=python3-narwhals
-version=1.41.1
+version=1.45.0
 revision=1
 build_style=python3-pep517
 hostmakedepends="hatchling"
@@ -10,7 +10,7 @@ maintainer="Andrew J. Hesford <ajh@sideband.org>"
 license="MIT"
 homepage="https://narwhals-dev.github.io/narwhals/"
 distfiles="${PYPI_SITE}/n/narwhals/narwhals-${version}.tar.gz"
-checksum=be973f27b9eca2bab82c789b9c63135b5cd2a726c80309146356dd923b6f5104
+checksum=f9ecefb9d09cda6fefa8ead10dc37a79129b6c78b0ac7117d21b4d4486bdd0d1
 make_check=no # archive includes no tests
 
 post_install() {
