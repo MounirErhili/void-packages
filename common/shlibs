@@ -1120,7 +1120,7 @@ libSDL_sound-1.0.so.1 SDL_sound-1.0.3_1
 libgtksourceview-2.0.so.0 gtksourceview2-2.10.5_1
 libxdot.so.4 graphviz-libs-2.28.0_6
 libgvpr.so.2 graphviz-libs-2.28.0_6
-libcgraph.so.7 graphviz-libs-13.0.0_1
+libcgraph.so.8 graphviz-libs-14.0.0_1
 libgvc.so.7 graphviz-libs-13.0.0_1
 libcdt.so.6 graphviz-libs-13.0.0_1
 libpathplan.so.4 graphviz-libs-2.28.0_6
@@ -2362,9 +2362,6 @@ libphonon4qt5.so.4 phonon-qt5-4.8.3_1
 libphonon4qt5experimental.so.4 phonon-qt5-4.8.3_1
 libphonon4qt6.so.4 phonon-4.12.0_1
 libphonon4qt6experimental.so.4 phonon-4.12.0_1
-libtelepathy-qt5.so.0 telepathy-qt5-0.9.5_1
-libtelepathy-qt5-service.so.1 telepathy-qt5-0.9.8_1
-libtelepathy-qt5-farstream.so.0 telepathy-qt5-farstream-0.9.5_1
 libKF5Attica.so.5 attica-5.6.0_1
 liblastfm_fingerprint5.so.1 liblastfm-qt5-1.0.9_1
 liblastfm5.so.1 liblastfm-qt5-1.0.9_1
@@ -2887,15 +2884,12 @@ libKF5CalendarEvents.so.5 kdeclarative-5.26.0_1
 libKF5KCMUtils.so.5 kcmutils-5.26.0_1
 libKF5KCMUtilsCore.so.5 kcmutils-5.95.0_1
 libKF5Style.so.5 frameworkintegration-5.26.0_1
-libkdeinit5_klauncher.so kinit-5.26.0_1
 libKF5NewStuff.so.5 knewstuff-5.26.0_1
 libKF5NewStuffCore.so.5 knewstuff-5.36.0_1
 libKF5NewStuffWidgets.so.5 knewstuff-5.95.0_1
 libKF5NotifyConfig.so.5 knotifyconfig-5.26.0_1
 libKF5Parts.so.5 kparts-5.26.0_1
 libKF5Activities.so.5 kactivities5-5.26.0_1
-libkdeinit5_kded5.so kded-5.26.0_1
-libKF5WebKit.so.5 kdewebkit-5.26.0_1
 libKF5TextEditor.so.5 ktexteditor-5.26.0_1
 libKF5Plasma.so.5 plasma-framework-5.26.0_1
 libKF5PlasmaQuick.so.5 plasma-framework-5.26.0_1
@@ -3541,11 +3535,11 @@ libSPIRV.so glslang-15.0.0_1
 libSPIRV-Tools-shared.so SPIRV-Tools-2022.3_1
 libmaxminddb.so.0 libmaxminddb-1.3.2_1
 libmysqlpp.so.3 mysql++-3.2.5_1
-libKF5Syndication.so.5 syndication-5.50.0_1
 liblqr-1.so.0 liblqr-0.4.2_1
 libmozjs-102.so.0 mozjs102-102.3.0_1
 libmozjs-115.so.0 mozjs115-115.8.0_1
 libmozjs-128.so.0 mozjs128-128.7.0_1
+libmozjs-140.so.0 mozjs140-140.1.0_1
 libebur128.so.1 libebur128-1.2.4_1
 libgtksourceview-4.so.0 gtksourceview4-4.0.2_1
 libgtksourceview-5.so.0 gtksourceview5-5.2.0_1
@@ -4528,3 +4522,4 @@ libeot.so.0 libeot-0.01_1
 libafflib.so.0 afflib-3.7.21_1
 libsquashfuse.so.0 squashfuse-0.6.1_1
 libsquashfuse_ll.so.0 squashfuse-0.6.1_1
+libSDL3_ttf.so.0 SDL3_ttf-3.2.2_1
