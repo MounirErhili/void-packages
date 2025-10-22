@@ -353,7 +353,7 @@ libMagickCore-7.Q16HDRI.so.10 libmagick-7.1.0.10_1
 libMagickWand-7.Q16HDRI.so.10 libmagick-7.1.0.10_1
 libMagick++-7.Q16HDRI.so.5 libmagick-7.0.11.1_1
 libltdl.so.7 libltdl-2.2.6_1
-libpoppler.so.150 libpoppler-25.06.0_1
+libpoppler.so.154 libpoppler-25.10.0_1
 libpoppler-glib.so.8 poppler-glib-0.18.2_1
 libpoppler-cpp.so.2 poppler-cpp-25.02.0_1
 libpoppler-qt5.so.1 poppler-qt5-0.31.0_1
@@ -2900,9 +2900,8 @@ libgnome-autoar-0.so.0 gnome-autoar-0.1.1_1
 libgnome-autoar-gtk-0.so.0 gnome-autoar-0.1.1_1
 libxapp.so.1 xapps-1.0.2_1
 libite.so.5 libite-2.0.1_1
-liblog4cplus-1.2.so.5 log4cplus-1.2.0_1
-liblog4cplus-2.0.so.3 log4cplus-2.0.0_1
-liblog4cplusU-2.0.so.3 log4cplus-2.0.3_1
+liblog4cplus-2.1.so.9 log4cplus-2.1.2_1
+liblog4cplusU-2.1.so.9 log4cplus-2.1.2_1
 libcapnpc-1.1.0.so capnproto-1.1.0_1
 libcapnp-json-1.1.0.so capnproto-1.1.0_1
 libcapnp-rpc-1.1.0.so capnproto-1.1.0_1
@@ -3570,7 +3569,7 @@ libmanette-0.2.so.0 libmanette-0.2.1_1
 libfmt.so.12 fmt-12.0.0_1
 libelementary-calendar.so.0 libio.elementary.calendar-4.2.3_1
 libolm.so.3 olm-3.0.0_1
-libtls.so.32 libtls-4.1.0_1
+libtls.so.33 libtls-4.2.0_1
 libxmlb.so.2 libxmlb-0.2.1_1
 libvoikko.so.1 libvoikko-4.2_1
 libfstrcmp.so.0 libfstrcmp-0.7.D001_1
@@ -4233,7 +4232,7 @@ librttopo.so.1 librttopo-1.1.0_1
 libspatialite.so.7 libspatialite-5.0.1_1
 mod_spatialite.so.7 libspatialite-5.0.1_1
 libreadosm.so.1 readosm-1.1.0a_1
-libSvtAv1Enc.so.2 libsvt-av1-2.1.2_1
+libSvtAv1Enc.so.3 libsvt-av1-3.1.2_1
 libyascreen.so.0 yascreen-1.96_1
 libyyjson.so.0 yyjson-0.10.0_1
 librz_analysis.so.0.7 rizin-0.7.2_1
