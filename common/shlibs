@@ -557,9 +557,7 @@ libpspell.so.15 libaspell-0.60.8_2
 libenchant-2.so.2 enchant2-2.2.3_1
 libpackagekit-glib2.so.18 PackageKit-1.1.12_1
 libpsl.so.5 libpsl-0.20.2_1
-libsoup-2.4.so.1 libsoup-2.34.0_1
 libsoup-3.0.so.0 libsoup3-3.0.0_1
-libsoup-gnome-2.4.so.1 libsoup-gnome-2.34.0_1
 libgnome-panel.so.3 gnome-panel-3.52.0_1
 libuninum.so.5 libuninum-2.7_1
 libwebkit2gtk-4.1.so.0 libwebkit2gtk41-2.38.0_1
@@ -631,7 +629,6 @@ libevolution-mail-composer.so evolution-3.48.0_1
 libevolution-mail-formatter.so evolution-3.40.0_1
 libevolution-shell.so evolution-3.28.0_1
 libedata-cal-2.0.so.2 evolution-data-server-3.46.0_1
-libgdata.so.22 libgdata-0.17.9_1
 libpcap.so.1 libpcap-1.1.1_1
 libiptc.so.0 iptables-1.4.7_1
 libip6tc.so.2 iptables-1.8.3_1
@@ -1555,7 +1552,6 @@ libtcmalloc.so.4 gperftools-2.1_1
 libaio.so.1 libaio-0.3.109_1
 libofx.so.7 libofx-0.10.1_1
 libsigsegv.so.2 libsigsegv-2.10_2
-libfprint.so.0 libfprint0-1.0_1
 libfprint-2.so.2 libfprint-1.90.7_1
 libmspack.so.0 libmspack-0.4alpha_1
 libslim.so.1.3.6 slim-1.3.6_1
@@ -3976,7 +3972,7 @@ libcglm.so.0 cglm-0.7.6_1
 libfcft.so.4 fcft-3.0.1_1
 libaml.so.0 aml-0.1.0_1
 libneatvnc.so.0 neatvnc-0.3.2_1
-libtdjson.so.1.8.55 libtd-1.8.55_1
+libtdjson.so.1.8.56 libtd-1.8.56_1
 libJudy.so.1 judy-1.0.5_1
 libsignal-protocol-c.so.2 libsignal-protocol-c-2.3.3_2
 libKSeExprUI.so.4 seexpr-krita-4.0.4.0_1
@@ -4155,7 +4151,7 @@ libmd.so.0 libmd-1.0.3_1
 libldacBT_abr.so.2 ldacBT-2.0.2.3_1
 libldacBT_enc.so.2 ldacBT-2.0.2.3_1
 libfreeaptx.so.0 libfreeaptx-0.1.1_1
-libgumbo.so.1 gumbo-parser-0.10.1_2
+libgumbo.so.3 gumbo-parser-0.13.2_1
 libmariadb.so.3 libmariadbclient-10.5.9_1
 libmariadbd.so.19 libmariadbclient-10.5.9_1
 libinstpatch-1.0.so.2 libinstpatch-1.1.6_1
