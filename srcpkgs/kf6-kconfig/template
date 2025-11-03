@@ -1,7 +1,10 @@
 # Template file for 'kf6-kconfig'
+#
+# reverts because all KDE must be updated at once
 pkgname=kf6-kconfig
+reverts="6.19.0_1"
 version=6.18.0
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
