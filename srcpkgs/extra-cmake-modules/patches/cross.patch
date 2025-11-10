@@ -1,4 +1,4 @@
-From 2c050e9842f97df7b09a46210cdb29ec7b10281b Mon Sep 17 00:00:00 2001
+From a013cb4ea5fd0965bbc7285821d39be72ddefd9a Mon Sep 17 00:00:00 2001
 From: Đoàn Trần Công Danh <congdanhqx@gmail.com>
 Date: Wed, 3 Sep 2025 10:21:36 +0700
 Subject: [PATCH] Qt: always find qt-tools in host environment
@@ -34,7 +34,7 @@ fallback will be used should `Qt6<Module>` is not available.
          PURPOSE "Required to build documentation for Extra CMake Modules."
  )
  
-+find_package(Qt6 OPTIONAL_COMPONENTS Tools)
++find_package(Qt6 OPTIONAL_COMPONENTS Tools QUIET)
  find_package(Qt6 COMPONENTS ToolsTools)
  set_package_properties(
      Qt6ToolsTools
@@ -44,7 +44,7 @@ fallback will be used should `Qt6<Module>` is not available.
              DESCRIPTION "Part of Qt5 tools"
          )
      else()
-+        find_package(Qt6 OPTIONAL_COMPONENTS Tools CONFIG REQUIRED)
++        find_package(Qt6 OPTIONAL_COMPONENTS Tools CONFIG QUIET)
          find_package(Qt6 COMPONENTS ToolsTools CONFIG REQUIRED)
          set_package_properties(Qt6ToolsTools PROPERTIES
              TYPE REQUIRED
@@ -54,7 +54,7 @@ fallback will be used should `Qt6<Module>` is not available.
  # If we haven't checked the version above, use qmlplugindump
  if (NOT CMAKE_CROSSCOMPILING AND NOT MODULE_NOTFOUND AND NOT @GENMODULE@_FOUND AND (NOT DEFINED QT6_IS_SHARED_LIBS_BUILD OR QT6_IS_SHARED_LIBS_BUILD))
      if (QT_MAJOR_VERSION EQUAL "6")
-+        find_package(Qt6 OPTIONAL_COMPONENTS Qml REQUIRED)
++        find_package(Qt6 OPTIONAL_COMPONENTS Qml QUIET)
          find_package(Qt6 COMPONENTS QmlTools REQUIRED)
          get_target_property(QMLPLUGINDUMP_PROGRAM Qt6::qmlplugindump LOCATION)
      else()
@@ -75,7 +75,7 @@ fallback will be used should `Qt6<Module>` is not available.
      if (QT_MAJOR_VERSION EQUAL "5")
          find_package(Qt5LinguistTools CONFIG REQUIRED)
      else()
-+        find_package(Qt6 OPTIONAL_COMPONENTS Linguist CONFIG REQUIRED)
++        find_package(Qt6 OPTIONAL_COMPONENTS Linguist CONFIG QUIET)
          find_package(Qt6 COMPONENTS LinguistTools CONFIG REQUIRED)
      endif()
  
