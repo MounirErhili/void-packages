@@ -3160,6 +3160,7 @@ libsysprof-6.so.6 libsysprof-45.1_1
 libvala-0.56.so.0 libvala-0.56.0_1
 libvaladoc-0.56.so.0 libvaladoc-0.56.0_1
 libvalaccodegen.so libvala-0.44.0_1
+libvali.so.1 vali-0.1.1_1
 libphodav-3.0.so.0 phodav-3.0_1
 libgfshare.so.2 libgfshare-2.0.0_1
 libtacacs.so.1 tacacs-4.0.4.28_1
@@ -3961,7 +3962,7 @@ libjsonnet.so.0 jsonnet-0.14.0_2
 libjsonnet++.so.0 jsonnet-0.14.0_2
 libigdgmm.so.12 intel-gmmlib-22.1.3_1
 libigfxcmrt.so.7 intel-media-driver-21.3.5_1
-libigraph.so.3 igraph-0.10.2_1
+libigraph.so.4 igraph-1.0.0_1
 libgtk-layer-shell.so.0 gtk-layer-shell-0.1.0_1
 libgtk4-layer-shell.so.0 gtk4-layer-shell-1.1.0_1
 librdkafka.so.1 librdkafka-1.4.4_3
