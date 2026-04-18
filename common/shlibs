@@ -2766,8 +2766,8 @@ leatherman_execution.so.1.12.4 leatherman-1.12.4_1
 leatherman_ruby.so.1.12.4 leatherman-1.12.4_1
 libfbclient.so.2 libfbclient3-3.0.4.33054_1
 libipmiutil.so.1 ipmiutil-3.1.3_4
-libQXmppQt6.so.8 qxmpp-1.14.0_1
-libQXmppOmemoQt6.so.8 qxmpp-1.14.0_1
+libQXmppQt6.so.9 qxmpp-1.15.0_1
+libQXmppOmemoQt6.so.9 qxmpp-1.15.0_1
 libunwind.so.1 llvm-libunwind-3.8.0_1
 libc++abi.so.1 libcxxabi-3.8.0_1
 libfastjson.so.4 libfastjson-0.99.3_1
@@ -4330,9 +4330,9 @@ libopensmtpd.so.0 libopensmtpd-0.7_1
 libiio.so.0 libiio-0.23_1
 libqtforkawesome.so.1 qtforkawesome-0.1.0_1
 libqtquickforkawesome.so.1 qtforkawesome-0.1.0_1
-libsyncthingwidgets.so.34 syncthingtray-2.0.7_1
-libsyncthingmodel.so.34 syncthingtray-2.0.7_1
-libsyncthingconnector.so.34 syncthingtray-2.0.7_1
+libsyncthingwidgets.so.35 syncthingtray-2.0.10_1
+libsyncthingmodel.so.35 syncthingtray-2.0.10_1
+libsyncthingconnector.so.35 syncthingtray-2.0.10_1
 libglibutil.so.1 libglibutil-1.0.64_1
 libgbinder.so.1 libgbinder-1.1.20_1
 libgxml-0.20.so.2.0.2 gxml-0.20.3_1
