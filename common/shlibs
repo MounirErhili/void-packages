@@ -2546,8 +2546,7 @@ libgnunettransport.so.2 gnunet-0.12.2_1
 libgnunettransportapplication.so.0 gnunet-0.12.2_1
 libgnunettransportcore.so.0 gnunet-0.12.2_1
 libgnunettransportcommunicator.so.0 gnunet-0.12.2_1
-libskarnet.so.2.14 skalibs-2.14.0.0_1
-libskarnet.so.2.14 skalibs-2.14.4.0_1
+libskarnet.so.2.15 skalibs-2.15.0.0_1
 libKF6BalooWidgets.so.6 baloo-widgets-24.02.0_1
 libtidy.so.58 libtidy5-5.8.0_1
 libSDL2_gfx-1.0.so.0 SDL2_gfx-1.0.1_1
@@ -3995,7 +3994,7 @@ libgtk4-layer-shell.so.0 gtk4-layer-shell-1.1.0_1
 librdkafka.so.1 librdkafka-1.4.4_3
 librdkafka++.so.1 librdkafka-1.4.4_3
 libraft.so.0 raft-0.18.2_1
-libmdnsd.so.1 libmdnsd-0.9_1
+libmdnsd.so.2 libmdnsd-1.0_1
 libosdGPU.so.3.6.0 OpenSubdiv-3.6.0_1
 libosdCPU.so.3.6.0 OpenSubdiv-3.6.0_1
 libcaribou.so.0 libcaribou-0.4.21_3
@@ -4601,3 +4600,4 @@ libigloo.so.0 libigloo-0.9.5_1
 libfyaml.so.0 libfyaml-0.9.6_1
 libcpptrace.so.1 cpptrace-1.0.4_1
 libcgif.so.0 cgif-0.5.3_1
+libdsk.so.5 libdsk-1.5.22_1
