@@ -2804,8 +2804,8 @@ leatherman_execution.so.1.12.4 leatherman-1.12.4_1
 leatherman_ruby.so.1.12.4 leatherman-1.12.4_1
 libfbclient.so.2 libfbclient3-3.0.4.33054_1
 libipmiutil.so.1 ipmiutil-3.1.3_4
-libQXmppQt6.so.10 qxmpp-1.16.3_1
-libQXmppOmemoQt6.so.10 qxmpp-1.16.3_1
+libQXmppQt6.so.11 qxmpp-1.17.1_1
+libQXmppOmemoQt6.so.11 qxmpp-1.17.1_1
 libunwind.so.1 llvm-libunwind-3.8.0_1
 libc++abi.so.1 libcxxabi-3.8.0_1
 libfastjson.so.4 libfastjson-0.99.3_1
@@ -3025,7 +3025,7 @@ libiscsi.so.9 libiscsi-1.19.0_1
 libgme.so.0 libgme-0.6.1_1
 libzmusic.so.1 ZMusic-1.1.2_1
 libzmusiclite.so.1 ZMusic-1.1.2_1
-libsidplayfp.so.6 libsidplayfp-2.1.0_1
+libsidplayfp.so.7 libsidplayfp-3.1.2_1
 libstilview.so.0 libsidplayfp-1.8.7_1
 libczmq.so.4 czmq-4.0.1_1
 liblz.so.1 lzlib-1.8_1
